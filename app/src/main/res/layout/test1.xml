@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+    android:id="@+id/centerButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+    android:text="Center" />
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="10dp"
+        android:layout_height="100dp"
+        android:background="#FF8800"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/centerButton"/>
+
+    <View
+        android:id="@+id/bottomView"
+        android:layout_width="10dp"
+        android:layout_height="100dp"
+        android:background="#00FF88"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/centerButton" />
+
+    <View
+        android:id="@+id/leftView"
+        android:layout_width="60dp"
+        android:layout_height="10dp"
+        android:background="#0088FF"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/centerButton" />
+
+    <View
+        android:id="@+id/rightView"
+        android:layout_width="60dp"
+        android:layout_height="10dp"
+        android:background="#FF88FF"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/centerButton" />
+
+    <TextView
+        android:id="@+id/txtTopLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/topView"
+        android:layout_alignStart="@id/leftView"
+        android:background="#8844EE"
+        android:padding="4dp"
+        android:text="TopLeft"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/txtTopRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/topView"
+        android:layout_alignEnd="@id/rightView"
+        android:background="#8844EE"
+        android:padding="4dp"
+        android:text="TopRight"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/txtBottomLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bottomView"
+        android:layout_alignStart="@id/leftView"
+        android:background="#8844EE"
+        android:padding="4dp"
+        android:text="BottomLeft"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/txtBottomRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bottomView"
+        android:layout_alignEnd="@id/rightView"
+        android:background="#8844EE"
+        android:padding="4dp"
+        android:text="BottomLeft"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/topLeftParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#8844EE"
+        android:padding="4dp"
+        android:text="TopLeftParent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/topRightParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#8844EE"
+        android:padding="4dp"
+        android:text="TopRightParent"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/bottomLeftParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#8844EE"
+        android:padding="4dp"
+        android:text="BottomLeftParent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/bottomRightParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#8844EE"
+        android:padding="4dp"
+        android:text="BottomRightParent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topLeftParent"
+        android:layout_toStartOf="@+id/topRightParent"
+        android:layout_toEndOf="@id/topLeftParent"
+        android:background="#8844EE"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="Beetwin 2 Views"
+        android:textColor="@color/white" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomRightParent"
+        android:layout_below="@id/txtBottomRight"
+        android:layout_alignStart="@id/txtBottomLeft"
+        android:layout_alignEnd="@id/txtBottomRight"
+        android:background="#5599FFFF"
+        android:padding="4dp" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#8844EE"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="TXT in Frame"
+        android:textColor="@color/white" />
+
+    </FrameLayout>
+
+    </RelativeLayout>
